@@ -45,6 +45,7 @@ jobs:
       - name: Deploy application
         env:
           DEPLOY_KEY: ${{ secrets.TOKEN }}
-        run: |
+        run:  npx gh-pages -d dist -r https://x-access-token:${{ secrets. TOKEN }}@github.com/<your-username>/<repo-name>.git
+
           echo "Deploying application..."
           # Add your real deployment command here
