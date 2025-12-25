@@ -23,14 +23,15 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
         working-directory: my-myntra
+        run: npm install
 
       - name: Run tests
-        run: npm test
         working-directory: my-myntra
+        run: npm test
 
       - name: Build project
+        working-directory: my-myntra
         run: npm run build
 
   deploy:
